@@ -6,6 +6,9 @@ Each project is encapsulated in a specific branch, I will use this main only for
 
 ## Projects status
 ✔  Libft: 122/125
+
 ✔  get_next_line: 125/125
+
 ✔  Printf: 100/125
+
 ✔  push_swap: 125/125
