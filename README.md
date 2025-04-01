@@ -9,7 +9,7 @@ Each project is encapsulated in a specific branch, I will use this main only for
 
 [get_next_line](https://github.com/mcecchel/42_School/tree/get_next_line)  (125/125)
 
-[Printf](https://github.com/mcecchel/42_School/tree/ft_printf)  (100/125)
+[ft_printf](https://github.com/mcecchel/42_School/tree/ft_printf)  (100/125)
 
 [push_swap](https://github.com/mcecchel/42_School/tree/push_swap)  (125/125)
 
