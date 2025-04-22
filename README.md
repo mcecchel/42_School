@@ -5,12 +5,14 @@ Each project is encapsulated in a specific branch, I will use this main only for
 
 
 ## Projects status
-[libft](https://github.com/mcecchel/42_School/tree/libft)  (122/125)
+[libft](https://github.com/mcecchel/42_School/tree/libft)  (122/100)
 
-[get_next_line](https://github.com/mcecchel/42_School/tree/get_next_line)  (125/125)
+[get_next_line](https://github.com/mcecchel/42_School/tree/get_next_line)  (125/100)
 
-[ft_printf](https://github.com/mcecchel/42_School/tree/ft_printf)  (100/125)
+[ft_printf](https://github.com/mcecchel/42_School/tree/ft_printf)  (100/100)
 
-[push_swap](https://github.com/mcecchel/42_School/tree/push_swap)  (125/125)
+[push_swap](https://github.com/mcecchel/42_School/tree/push_swap)  (125/100)
 
-[so_long](https://github.com/mcecchel/42_School/tree/so_long)  (125/125)
+[so_long](https://github.com/mcecchel/42_School/tree/so_long)  (125/100)
+
+[pipex](https://github.com/mcecchel/pipex.git)  (progetto in chiusura)
