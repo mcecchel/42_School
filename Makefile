@@ -7,6 +7,8 @@ LIBFT_DIR	= Libft
 LIBFT_LIB	= $(LIBFT_DIR)/libft.a
 
 SRC		= 	src/utils.c \
+			src/manage_cmd.c \
+			src/close_error.c \
 			src/pipex.c \
 			main.c
 
