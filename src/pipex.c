@@ -6,7 +6,7 @@
 /*   By: mcecchel <mcecchel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 15:16:21 by mcecchel          #+#    #+#             */
-/*   Updated: 2025/04/22 17:06:30 by mcecchel         ###   ########.fr       */
+/*   Updated: 2025/04/23 14:58:15 by mcecchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ int	open_file(t_pipex pipex, char *file, int in_or_out)
 {
 	int	ret_fd;
 
-	if (in_or_out == 0) // Infile
+	if (in_or_out == 0)
 		ret_fd = open(file, O_RDONLY);
-	if (in_or_out == 1) // Outfile
+	if (in_or_out == 1)
 		ret_fd = open(file, O_WRONLY | O_CREAT | O_TRUNC, 0644);
 	if (ret_fd < 0)
 	{
@@ -38,10 +38,8 @@ void	child_process(t_pipex pipex, char **av, char **envp)
 		perror("Infile open failed");
 		exit(1);
 	}
-	// Redirige l'input file -> stdin
 	dup2(pipex.fd_in, STDIN_FILENO);
 	close(pipex.fd_in);
-	// Redirige stdout -> pipe
 	dup2(pipex.fd_pipe[1], STDOUT_FILENO);
 	close_fd_pipe(pipex);
 	execute_cmd(pipex, av[2], envp);

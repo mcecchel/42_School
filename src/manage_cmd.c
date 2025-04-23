@@ -6,18 +6,17 @@
 /*   By: mcecchel <mcecchel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 16:33:47 by mcecchel          #+#    #+#             */
-/*   Updated: 2025/04/22 17:13:05 by mcecchel         ###   ########.fr       */
+/*   Updated: 2025/04/23 15:25:31 by mcecchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pipex.h"
 
-// Controlla che l'argomento del programma sia valido
 int	is_valid_command(t_pipex pipex, char *cmd)
 {
 	if (cmd == NULL || *cmd == '\0' || find_spaces(*cmd) == 1)
-    {
-		perror("Error: Invalid command\n");
+	{
+		perror("Error: Invalid command");
 		if (pipex.fd_in != -1)
 			close(pipex.fd_in);
 		if (pipex.fd_out != -1)
@@ -26,7 +25,7 @@ int	is_valid_command(t_pipex pipex, char *cmd)
 	}
 	return (1);
 }
-// Ottengo il valore di path in stringa
+
 char	**get_paths(t_pipex pipex)
 {
 	char	*path_env;
@@ -35,12 +34,12 @@ char	**get_paths(t_pipex pipex)
 	path_env = find_env_path(pipex);
 	if (!path_env)
 	{
-		perror("Error: Failed to find path\n");
+		perror("Error: Failed to find path");
 		return (NULL);
 	}
 	paths = ft_split(path_env, ':');
 	if (!paths)
-		perror("Error: Failed to split path\n");
+		perror("Error: Failed to split path");
 	return (paths);
 }
 
@@ -99,7 +98,6 @@ void	execute_cmd(t_pipex pipex, char *av, char **envp)
 	path = get_cmd_path(pipex, command[0]);
 	if (!path)
 	{
-		perror("Command path not found");
 		free_split(command);
 		close_fd(pipex);
 		exit(1);

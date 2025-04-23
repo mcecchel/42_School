@@ -6,7 +6,7 @@
 /*   By: mcecchel <mcecchel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 18:42:23 by mcecchel          #+#    #+#             */
-/*   Updated: 2025/04/22 17:12:30 by mcecchel         ###   ########.fr       */
+/*   Updated: 2025/04/22 17:27:27 by mcecchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,6 @@ void	close_fd(t_pipex pipex);
 void	close_fd_pipe(t_pipex pipex);
 
 void	fork_processes(t_pipex pipex, char **av, char **envp);
-int main(int ac, char **av, char **envp);
+int		main(int ac, char **av, char **envp);
 
 #endif
