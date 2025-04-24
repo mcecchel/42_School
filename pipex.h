@@ -6,7 +6,7 @@
 /*   By: mcecchel <mcecchel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 18:42:23 by mcecchel          #+#    #+#             */
-/*   Updated: 2025/04/22 17:27:27 by mcecchel         ###   ########.fr       */
+/*   Updated: 2025/04/24 10:04:46 by mcecchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ typedef struct s_pipex
 {
 	int		fd_in;
 	int		fd_out;
-	int		fd_pipe[2];// Dove fd[0] = lettura, fd[1] = scrittura
+	int		fd_pipe[2];
 	char	**envp;
 	int		child_1;
 	int		child_2;
@@ -55,7 +55,6 @@ void	execute_cmd(t_pipex pipex, char *av, char **envp);
 
 // Main program functions
 int		open_file(t_pipex pipex, char *file, int in_or_out);
-// char	*get_cmd_path(t_pipex pipex, char *cmd);
 void	child_process(t_pipex pipex, char **av, char **envp);
 void	parent_process(t_pipex pipex, char **av, char **envp);
 
