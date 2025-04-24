@@ -15,4 +15,4 @@ Each project is encapsulated in a specific branch, I will use this main only for
 
 [so_long](https://github.com/mcecchel/42_School/tree/so_long)  (125/100)
 
-[pipex](https://github.com/mcecchel/pipex.git)  (progetto in chiusura)
+[pipex](https://github.com/mcecchel/42_School/tree/pipex)  (100/100)
