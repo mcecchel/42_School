@@ -1,18 +1,45 @@
-# 42_School
+# 🚀 42_School Projects
 
-This repository was created to encapsulate all the projects I have done so far since the beginning of my journey at School 42. 
-Each project is encapsulated in a specific branch, I will use this main only for communication about updates
+Welcome to my **42 School** journey repository!  
+Here you'll find all the projects I've completed since I started my adventure at [42 Network](https://42.fr/).  
+Each project is stored in its own dedicated **branch**.  
+This `main` branch is reserved for general updates and communication.
+
+---
+
+## 📁 Project Overview
+
+| Project        | Status | Score | Link |
+|----------------|--------|-------|------|
+| 🧱 Libft        | ✅ Done | `122/100` | [View branch](https://github.com/mcecchel/42_School/tree/libft) |
+| 📄 Get Next Line | ✅ Done | `125/100` | [View branch](https://github.com/mcecchel/42_School/tree/get_next_line) |
+| 🖨️ ft_printf    | ✅ Done | `100/100` | [View branch](https://github.com/mcecchel/42_School/tree/ft_printf) |
+| 🧮 Push Swap    | ✅ Done | `125/100` | [View branch](https://github.com/mcecchel/42_School/tree/push_swap) |
+| 🎮 So Long      | ✅ Done | `125/100` | [View branch](https://github.com/mcecchel/42_School/tree/so_long) |
+| 🔗 Pipex        | ✅ Done | `100/100` | [View branch](https://github.com/mcecchel/42_School/tree/pipex) |
 
 
-## Projects status
-[libft](https://github.com/mcecchel/42_School/tree/libft)  (122/100)
+---
 
-[get_next_line](https://github.com/mcecchel/42_School/tree/get_next_line)  (125/100)
+## 🛠️ Currently Working On
 
-[ft_printf](https://github.com/mcecchel/42_School/tree/ft_printf)  (100/100)
+### 🐚 Minishell
+I'm currently working on the `minishell` project — a simplified shell that interprets and runs user commands.  
+Stay tuned for updates and final results!
 
-[push_swap](https://github.com/mcecchel/42_School/tree/push_swap)  (125/100)
+Branch coming soon...
 
-[so_long](https://github.com/mcecchel/42_School/tree/so_long)  (125/100)
+---
 
-[pipex](https://github.com/mcecchel/42_School/tree/pipex)  (100/100)
+## 📌 Notes
+
+- 🔀 Each project is in a **separate branch** — just switch to the one you're interested in.
+- 📬 This repository is a **living document** — it will be updated as I complete new projects or refine existing ones.
+- ⭐ Feel free to explore, give feedback, or star the repository if you find it helpful!
+
+---
+
+## 🧑‍💻 About Me
+
+I'm a passionate learner at **42 School**, diving deep into system programming, algorithms, and more.  
+Check out my [GitHub profile](https://github.com/mcecchel) for other projects and contributions!
