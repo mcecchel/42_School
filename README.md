@@ -11,7 +11,7 @@ This `main` branch is reserved for general updates and communication.
 
 | Project        | Status | Score | Link |
 |----------------|--------|-------|------|
-| 🧱 Libft        | ✅ Done | `122/100` | [View branch](https://github.com/mcecchel/42_School/tree/libft) |
+| 📖 Libft        | ✅ Done | `122/100` | [View branch](https://github.com/mcecchel/42_School/tree/libft) |
 | 📄 Get Next Line | ✅ Done | `125/100` | [View branch](https://github.com/mcecchel/42_School/tree/get_next_line) |
 | 🖨️ ft_printf    | ✅ Done | `100/100` | [View branch](https://github.com/mcecchel/42_School/tree/ft_printf) |
 | 🧮 Push Swap    | ✅ Done | `125/100` | [View branch](https://github.com/mcecchel/42_School/tree/push_swap) |
@@ -23,7 +23,7 @@ This `main` branch is reserved for general updates and communication.
 
 ## 🛠️ Currently Working On
 
-### 🐚 Minishell
+### 💻 Minishell
 I'm currently working on the `minishell` project — a simplified shell that interprets and runs user commands.  
 Stay tuned for updates and final results!
 
