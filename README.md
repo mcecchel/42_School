@@ -11,20 +11,21 @@ This `main` branch is reserved for general updates and communication.
 
 | Project        | Status | Score | Link |
 |----------------|--------|-------|------|
-| 📖 Libft        | ✅ Done | `122/100` | [View branch](https://github.com/mcecchel/42_School/tree/libft) |
+| 📖 Libft         | ✅ Done | `122/100` | [View branch](https://github.com/mcecchel/42_School/tree/libft) |
 | 📄 Get Next Line | ✅ Done | `125/100` | [View branch](https://github.com/mcecchel/42_School/tree/get_next_line) |
-| 🖨️ ft_printf    | ✅ Done | `100/100` | [View branch](https://github.com/mcecchel/42_School/tree/ft_printf) |
-| 🧮 Push Swap    | ✅ Done | `125/100` | [View branch](https://github.com/mcecchel/42_School/tree/push_swap) |
-| 🎮 So Long      | ✅ Done | `125/100` | [View branch](https://github.com/mcecchel/42_School/tree/so_long) |
-| 🔗 Pipex        | ✅ Done | `100/100` | [View branch](https://github.com/mcecchel/42_School/tree/pipex) |
-
+| 🖨️ ft_printf     | ✅ Done | `100/100` | [View branch](https://github.com/mcecchel/42_School/tree/ft_printf) |
+| 🧮 Push Swap     | ✅ Done | `125/100` | [View branch](https://github.com/mcecchel/42_School/tree/push_swap) |
+| 🎮 So Long       | ✅ Done | `125/100` | [View branch](https://github.com/mcecchel/42_School/tree/so_long) |
+| 🔗 Pipex         | ✅ Done | `100/100` | [View branch](https://github.com/mcecchel/42_School/tree/pipex) |
+| 💻 Minishell     | ✅ Done | `101/100` | [View branch](https://github.com/mcecchel/minishell) |
 
 ---
 
 ## 🛠️ Currently Working On
 
-### 💻 Minishell
-I'm currently working on the `minishell` project — a simplified shell that interprets and runs user commands.  
+### 🏛 Philosophers
+I'm currently working on the `philosophers` project — a simulation of the classic Dining Philosophers Problem, a concurrency problem designed to teach the basics of threads, mutexes, and deadlock prevention in C.
+Each philosopher is a thread that alternates between thinking, eating, and sleeping, while properly handling shared resources (forks) using synchronization techniques.  
 Stay tuned for updates and final results!
 
 Branch coming soon...
