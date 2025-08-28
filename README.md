@@ -18,6 +18,7 @@ This `main` branch is reserved for general updates and communication.
 | 🎮 So Long       | ✅ Done | `125/100` | [View branch](https://github.com/mcecchel/42_School/tree/so_long) |
 | 🔗 Pipex         | ✅ Done | `100/100` | [View branch](https://github.com/mcecchel/42_School/tree/pipex) |
 | 💻 Minishell     | ✅ Done | `101/100` | [View branch](https://github.com/mcecchel/minishell) |
+| 🏛 Philosophers  | ✅ Done | `100/100` | [View branch](https://github.com/mcecchel/Philosophers) |
 
 ---
 
