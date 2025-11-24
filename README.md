@@ -25,12 +25,12 @@ This `main` branch is reserved for general updates and communication.
 
 ## 🛠️ Currently Working On
 
-### 🏛 Philosophers
-I'm currently working on the `philosophers` project — a simulation of the classic Dining Philosophers Problem, a concurrency problem designed to teach the basics of threads, mutexes, and deadlock prevention in C.
-Each philosopher is a thread that alternates between thinking, eating, and sleeping, while properly handling shared resources (forks) using synchronization techniques.  
-Stay tuned for updates and final results!
+### CPP Modules
+I'm currently working on the `cpp modules` — a series of progressive exercises designed to introduce the fundamentals of modern C++ programming within the 42 curriculum.  
+Each module focuses on a specific concept such as object-oriented design, memory management, inheritance, polymorphism, exceptions, and templates, all aimed at building clean, robust, and maintainable code.
 
-Branch coming soon...
+More updates coming soon as I progress through the modules.
+Stay tuned for updates and final results!
 
 ---
 
