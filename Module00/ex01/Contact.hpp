@@ -1,5 +1,5 @@
-#ifndef CONTACT_HPP;
-#define CONTACT_HPP;
+#ifndef CONTACT_HPP
+#define CONTACT_HPP
 
 #include <string>
 

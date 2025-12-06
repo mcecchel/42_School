@@ -122,7 +122,7 @@ void	PhoneBook::searchContact() const
 	// Validazione input: deve essere un singolo digit
 	if (input.length() != 1 || !std::isdigit(input[0]))
 	{
-		std::cout << "Error: Invalid index" << std::endl;
+		std::cout << "Error: Invalid input" << std::endl;
 		return;
 	}
 	int index = input[0] - '0';// Converto char in int
@@ -135,7 +135,7 @@ void	PhoneBook::searchContact() const
 		max_index = 7;
 	if (index < 0 || index > max_index)
 	{
-		std::cout << "Error: Index out of range" << std::endl;
+		std::cout << "Error: Invalid index range" << std::endl;
 		return;
 	}
 	_displayContactDetails(index);

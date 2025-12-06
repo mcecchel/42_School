@@ -1,17 +1,17 @@
 NAME = phonebook
-CC = c++
-CFLAGS = -Wall -Wextra -Werror -g -std=c++98 -fsanitize=address -pedantic
+CXX = c++
+CXXFLAGS = -Wall -Wextra -Werror -g -std=c++98 -fsanitize=address
 RM = rm -f
 
-SRCS = phonebook.cpp
+SRCS = main.cpp Contact.cpp PhoneBook.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
 %.o: %.cpp
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
 all: $(NAME)
 
