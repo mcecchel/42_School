@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: mcecchel <mcecchel@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/24 17:38:46 by mcecchel          #+#    #+#             */
-/*   Updated: 2025/11/25 18:16:37 by mcecchel         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include <iostream>
 
 char	toupper(char c)
@@ -22,7 +10,7 @@ char	toupper(char c)
 int	main(int ac, char **av)
 {
 	if (ac == 1)
-		std::cout << " * LOUD AND UNBEARABLE FEEDBACK NOISE * ";
+		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
 	else
 	{
 		for (int i = 1; i < ac; i++)

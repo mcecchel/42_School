@@ -12,7 +12,6 @@ class Contact
 	std::string _PhoneNumber;
 	std::string _DarkestSecret;
 	public:
-	// Constructor e Destructor
 	Contact();
 	~Contact();
 	// Set - funzioni per modificare i dati della classe contact

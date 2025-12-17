@@ -67,7 +67,7 @@ void Account::displayAccountsInfos(void)
 // Gestione Deposit (depositare denaro)
 void	Account::makeDeposit(int deposit)
 {
-	int	previous_amount = _amount;// Salvo valore precedente rpima di aggiornare
+	int	previous_amount = _amount;// Salvo valore precedente peima di aggiornare
 	// Aggiorno contatore depositi personale
 	_amount += deposit;
 	_nbDeposits++;
@@ -123,25 +123,19 @@ void	Account::_displayTimestamp(void)
 	std::time_t now = std::time(NULL);
 	std::tm *localtime = std::localtime(&now);
 	std::cout << "[";
-	// Gestione anno 1(900 + tm_year)
 	std::cout << (1900 + localtime->tm_year);
-	// Gestione mese (tm_mon va da 0 a 11 quindi va fatto +1)
-	if (localtime->tm_mon + 1 < 10)
+	if (localtime->tm_mon + 1 < 10)// NB: tm_mon va da 0 a 11 quindi va fatto +1
 		std::cout << "0";
 	std::cout << (localtime->tm_mon + 1);
-	// Gestione giorno
 	if (localtime->tm_mday < 10)
 		std::cout << "0";
 	std::cout << localtime->tm_mday;
-	// Gestione ora
 	if (localtime->tm_hour < 10)
 		std::cout << "0";
 	std::cout << localtime->tm_hour;
-	// Gestione minuti
 	if (localtime->tm_min < 10)
 		std::cout << "0";
 	std::cout << localtime->tm_min;
-	// Gestione secondi
 	if (localtime->tm_sec < 10)
 		std::cout << "0";
 	std::cout << localtime->tm_sec;

@@ -3,7 +3,6 @@
 #include <iomanip>
 
 PhoneBook::PhoneBook() :	_ContactCount(0){}
-// Distruttore
 PhoneBook::~PhoneBook() {}
 void	PhoneBook::addContact()
 {
@@ -67,8 +66,8 @@ void	PhoneBook::addContact()
 std::string PhoneBook::_truncateString(std::string str) const
 {
 	if(str.length() > 10)
-		return (str.substr(0, 9) + ".");// estrae caratteri dalla posizione 0 per 9 caratteri
-	return (str);// Se length() <= 10, restituisce la stringa originale
+		return (str.substr(0, 9) + ".");
+	return (str);
 }
 // Dispaly table
 void	PhoneBook::_displayContactTable() const
@@ -79,7 +78,7 @@ void	PhoneBook::_displayContactTable() const
 	std::cout << std::setw(10) << std::right << "Last Name" << "|";
 	std::cout << std::setw(10) << std::right << "Nickname" << std::endl;
 	
-	// Determina quanti contatti mostrare (max 8)
+	// Determina quanti contatti mostrare
 	int	count;
 	if (_ContactCount < 8)
 		count = _ContactCount;
@@ -125,7 +124,7 @@ void	PhoneBook::searchContact() const
 		std::cout << "Error: Invalid input" << std::endl;
 		return;
 	}
-	int index = input[0] - '0';// Converto char in int
+	int index = input[0] - '0';
 
 	// Validazione range
 	int max_index;

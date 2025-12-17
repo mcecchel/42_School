@@ -4,6 +4,7 @@ CXXFLAGS = -Wall -Wextra -Werror -g -std=c++98 -fsanitize=address
 RM = rm -f
 
 SRCS = main.cpp Contact.cpp PhoneBook.cpp
+all: $(NAME)
 
 OBJS = $(SRCS:.cpp=.o)
 
@@ -13,7 +14,6 @@ OBJS = $(SRCS:.cpp=.o)
 $(NAME): $(OBJS)
 	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
-all: $(NAME)
 
 clean:
 	$(RM) $(OBJS)
