@@ -6,7 +6,7 @@
 /*   By: mcecchel <mcecchel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 18:40:26 by mcecchel          #+#    #+#             */
-/*   Updated: 2025/12/20 16:08:41 by mcecchel         ###   ########.fr       */
+/*   Updated: 2025/12/20 16:11:17 by mcecchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ class Zombie{
 		~Zombie();
 		void announce(void);
 		void setName(std::string name);
+		
 };
 Zombie* zombieHorde(int N, std::string name);
 
