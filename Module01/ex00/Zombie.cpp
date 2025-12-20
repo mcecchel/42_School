@@ -6,13 +6,13 @@
 /*   By: mcecchel <mcecchel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 18:10:01 by mcecchel          #+#    #+#             */
-/*   Updated: 2025/12/19 18:17:06 by mcecchel         ###   ########.fr       */
+/*   Updated: 2025/12/20 15:48:54 by mcecchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-// Inizializzo i  parametri del costruttore di default
+// Inizializzo i parametri del costruttore di default
 Zombie::Zombie() :	_name("Unnamed") {
 	std::cout << "Zombie " << _name << " created" << std::endl;
 }
