@@ -20,7 +20,7 @@ This `main` branch is reserved for general updates and communication.
 | 💻 Minishell     | ✅ Done | `101/100` | [View branch](https://github.com/mcecchel/minishell) |
 | 🏛 Philosophers  | ✅ Done | `100/100` | [View branch](https://github.com/mcecchel/Philosophers) |
 | 🌐 NetPractice   | ✅ Done | `100/100` | [View branch](https://github.com/mcecchel/42_CommonCore/tree/NetPractice) |
-| CPP Modules      | ✅ Done | `100/100` | [View branch](https://github.com/mcecchel/42_CommonCore/tree/CPP_Modules) |
+| CPP Modules      | 🔄 In progress |             | [View branch](https://github.com/mcecchel/42_CommonCore/tree/CPP_Modules) |
 
 ---
 
