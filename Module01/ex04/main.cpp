@@ -6,7 +6,7 @@
 /*   By: marianna <marianna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 15:33:21 by marianna          #+#    #+#             */
-/*   Updated: 2026/01/06 16:43:33 by marianna         ###   ########.fr       */
+/*   Updated: 2026/01/06 17:19:40 by marianna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <string>
 
 // Funzione per sostituire tutte le occorrenze di s1 con s2 in una stringa
-std::string replaceAllOccurrences(std::string str, const std::string& s1, const std::string& s2)
+std::string replaceAll(std::string str, const std::string& s1, const std::string& s2)
 {
 	std::string	result;
 	size_t		pos = 0;
@@ -72,7 +72,7 @@ int	main(int ac, char **av)
 	std::string	line;
 	while (std::getline(inputFile, line))
 	{
-		std::string	replaced = replaceAllOccurrences(line, s1, s2);// Sostituisco tutte le occorrenze di s1 con s2
+		std::string	replaced = replaceAll(line, s1, s2);// Sostituisco tutte le occorrenze di s1 con s2
 		outputFile << replaced << std::endl; // Scrivo la riga modificata nel file di output
 	}
 	inputFile.close();
