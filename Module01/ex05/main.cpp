@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marianna <marianna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mcecchel <mcecchel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/06 17:21:36 by marianna          #+#    #+#             */
-/*   Updated: 2026/01/08 17:08:29 by marianna         ###   ########.fr       */
+/*   Created: 2026/01/06 17:21:36 by mcecchel          #+#    #+#             */
+/*   Updated: 2026/01/13 13:26:58 by mcecchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int main()
 {
-	Harl    harl;
+	Harl	harl;
 
 	// Test base
 	harl.complain("DEBUG");
@@ -25,7 +25,7 @@ int main()
 	std::cout << std::endl;
 	harl.complain("ERROR");
 	std::cout << std::endl;
-	// Test caso non  valido
+	// Test caso non valido
 	harl.complain("INVALID");
 	std::cout << std::endl;
 	harl.complain("random name");

@@ -2,7 +2,7 @@ NAME = harl
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC = Harl.hpp Harl.cpp main.cpp
+SRC = Harl.cpp main.cpp
 
 all: $(NAME)
 

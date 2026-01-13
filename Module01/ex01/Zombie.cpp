@@ -6,7 +6,7 @@
 /*   By: mcecchel <mcecchel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 18:40:39 by mcecchel          #+#    #+#             */
-/*   Updated: 2025/12/20 15:50:21 by mcecchel         ###   ########.fr       */
+/*   Updated: 2026/01/12 12:54:36 by mcecchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ Zombie::~Zombie() {
 void	Zombie::announce(void) {
 	std::cout << _name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
-// setter nome
 void	Zombie::setName(std::string name) {
 	_name = name;
 }

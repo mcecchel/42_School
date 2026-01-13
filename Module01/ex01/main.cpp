@@ -6,7 +6,7 @@
 /*   By: mcecchel <mcecchel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 18:40:11 by mcecchel          #+#    #+#             */
-/*   Updated: 2025/12/20 16:07:02 by mcecchel         ###   ########.fr       */
+/*   Updated: 2026/01/12 12:40:51 by mcecchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	main()
 {
-	std::cout << "Creating horde of N zombies..." << std::endl;
-	int	N = 100;
+	int	N = 50;
+	std::cout << "Creating horde of " << N << " zombies..." << std::endl;
 	Zombie	*horde = zombieHorde(N, "'Anonimous'");
 	
 	std::cout << "\nMaking zombies announce themselves..." << std::endl;

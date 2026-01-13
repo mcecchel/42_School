@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marianna <marianna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mcecchel <mcecchel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/04 14:33:52 by marianna          #+#    #+#             */
-/*   Updated: 2026/01/04 15:14:07 by marianna         ###   ########.fr       */
+/*   Created: 2026/01/04 14:33:52 by mcecchel          #+#    #+#             */
+/*   Updated: 2026/01/12 14:22:35 by mcecchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@
 class HumanA {
 private:
 	std::string _name;
-    Weapon& _weapon;// reference perché è sempre armato
+	Weapon& _weapon;// reference perché è sempre armato
 public:
-    HumanA(std::string name, Weapon& weapon);// Gli passo già weapon nel costruttore
+	HumanA(std::string name, Weapon& weapon);// Gli passo già weapon nel costruttore
 	~HumanA();
 
 	void	attack() const;

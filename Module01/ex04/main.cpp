@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marianna <marianna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mcecchel <mcecchel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/06 15:33:21 by marianna          #+#    #+#             */
-/*   Updated: 2026/01/06 17:19:40 by marianna         ###   ########.fr       */
+/*   Created: 2026/01/06 15:33:21 by mcecchel          #+#    #+#             */
+/*   Updated: 2026/01/12 14:23:22 by mcecchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,23 +21,22 @@ std::string replaceAll(std::string str, const std::string& s1, const std::string
 	size_t		pos = 0;
 	size_t		found;
 
-	// Se s1 è vuota, ritorno str originale (evito loop infinito)
+	// Check per evitare loop infinito
 	if (s1.empty())
 		return (str);
 	// Cerco tutte le occorrenze di s1 in str
-	while ((found = str.find(s1, pos)) != std::string::npos)// se trovo occorrenza della substr s1
+	while ((found = str.find(s1, pos)) != std::string::npos)
 	{
-		result.append(str, pos, found - pos); // aggiungo a result la parte di str prima dell'occorrenza di s1
-		result += s2; // aggiungo a result s2
-		pos = found + s1.length(); // aggiorno pos per cercare la prossima occorrenza
+		result.append(str, pos, found - pos);// aggiungo a result la parte di str prima dell'occorrenza di s1
+		result += s2;
+		pos = found + s1.length();// aggiorno pos per cercare la prossima occorrenza
 	}
-	result.append(str, pos, str.length() - pos); // aggiungo il resto di str
+	result.append(str, pos, str.length() - pos);// aggiungo il resto di str
 	return (result);
 }
 
 int	main(int ac, char **av)
 {
-	// Controllo numero di argomenti
 	if (ac != 4)
 	{
 		std::cerr << "Error: Invalid number of arguments" << std::endl;
@@ -47,7 +46,6 @@ int	main(int ac, char **av)
 	std::string	filename = av[1];
 	std::string	s1 = av[2];
 	std::string	s2 = av[3];
-	// Check che s1 non sia vuota
 	if (s1.empty())
 	{
 		std::cerr << "Error: s1 cannot be empty" << std::endl;
@@ -60,20 +58,20 @@ int	main(int ac, char **av)
 		std::cerr << "Error: Could not open file " << filename << std::endl;
 		return (1);
 	}
-    std::string outputFilename = filename + ".replace";	// Creo file di output
-    std::ofstream outputFile(outputFilename.c_str());
-    if (!outputFile.is_open())
+	std::string outputFilename = filename + ".replace";// Creo file di output
+	std::ofstream outputFile(outputFilename.c_str());
+	if (!outputFile.is_open())
 	{
-        std::cerr << "Error: could not create output file " << outputFilename << std::endl;
-        inputFile.close();
-        return (1);
-    }
-	// Leggo il file riga per riga, sostituisco s1 con s2
+		std::cerr << "Error: could not create output file " << outputFilename << std::endl;
+		inputFile.close();
+		return (1);
+	}
+	// Leggo il file riga per riga sostituendo s1 con s2
 	std::string	line;
 	while (std::getline(inputFile, line))
 	{
-		std::string	replaced = replaceAll(line, s1, s2);// Sostituisco tutte le occorrenze di s1 con s2
-		outputFile << replaced << std::endl; // Scrivo la riga modificata nel file di output
+		std::string	replaced = replaceAll(line, s1, s2);
+		outputFile << replaced << std::endl;
 	}
 	inputFile.close();
 	outputFile.close();

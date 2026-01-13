@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marianna <marianna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mcecchel <mcecchel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/08 17:27:42 by marianna          #+#    #+#             */
-/*   Updated: 2026/01/08 17:59:31 by marianna         ###   ########.fr       */
+/*   Created: 2026/01/08 17:27:42 by mcecchel          #+#    #+#             */
+/*   Updated: 2026/01/13 13:27:13 by mcecchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int getLvlIndex(std::string level) {
 	else if (level == "ERROR")
 		return (3);
 	else
-		return (-1); // errore, livello sconosciuto
+		return (-1);// errore, livello sconosciuto
 }
 
 int	main(int ac, char **av)
@@ -44,15 +44,12 @@ int	main(int ac, char **av)
 		case 0:// Debug
 			harl.complain("DEBUG");
 			std::cout << std::endl;
-			// fall through
 		case 1:// info
 			harl.complain("INFO");
 			std::cout << std::endl;
-			// fall through
 		case 2:// Warning
 			harl.complain("WARNING");
 			std::cout << std::endl;
-			// fall through
 		case 3:// Error
 			harl.complain("ERROR");
 			break ;

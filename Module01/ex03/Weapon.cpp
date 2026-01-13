@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marianna <marianna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mcecchel <mcecchel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/04 14:33:21 by marianna          #+#    #+#             */
-/*   Updated: 2026/01/04 15:43:40 by marianna         ###   ########.fr       */
+/*   Created: 2026/01/04 14:33:21 by mcecchel          #+#    #+#             */
+/*   Updated: 2026/01/13 13:25:22 by mcecchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,12 @@
 Weapon::Weapon() : _type("Unarmed") {
 }
 // Inizializzo costruttore con type
-Weapon::Weapon(std::string type) : _type(type) {   
+Weapon::Weapon(std::string type) : _type(type) {
 }
-// Inizializzo distruttore
 Weapon::~Weapon() {
 }
 const std::string& Weapon::getType() const {
-	return (_type);//ritorna reference alla stringa interna, ma non permette di modificarla
+	return (_type);//ritorna reference alla stringa interna, non permette di modificarla
 }
 void Weapon::setType(std::string type) {
 	_type = type;

@@ -2,8 +2,7 @@ NAME = violence
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC = main.cpp HumanA.cpp HumanA.hpp HumanB.cpp HumanB.hpp Weapon.cpp Weapon.hpp
-
+SRC = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
 all: $(NAME)
 
 $(NAME): $(SRC)

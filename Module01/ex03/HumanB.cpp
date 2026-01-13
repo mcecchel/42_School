@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marianna <marianna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mcecchel <mcecchel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/04 14:34:19 by marianna          #+#    #+#             */
-/*   Updated: 2026/01/04 15:58:23 by marianna         ###   ########.fr       */
+/*   Created: 2026/01/04 14:34:19 by mcecchel          #+#    #+#             */
+/*   Updated: 2026/01/13 13:23:58 by mcecchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ HumanB::~HumanB() {
 }
 // Setter per arma
 void HumanB::setWeapon(Weapon& weapon) {
-	_weapon = &weapon;  // Salvo l'indirizzo dell'arma
+	_weapon = &weapon;// Salvo l'indirizzo dell'arma
 }
 void HumanB::attack() const {
 	if (_weapon == NULL)
