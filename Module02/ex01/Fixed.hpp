@@ -6,7 +6,7 @@
 /*   By: mcecchel <mcecchel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 12:26:55 by mcecchel          #+#    #+#             */
-/*   Updated: 2026/01/15 12:57:21 by mcecchel         ###   ########.fr       */
+/*   Updated: 2026/01/15 15:32:32 by mcecchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ private:
 public:
 	Fixed();
 	Fixed(const Fixed& copy);
-	Fixed& operator=(const Fixed& copy);// Copy assignment operator
+	Fixed& operator=(const Fixed& copy);
 	~Fixed();
 
 	// Costruttori da int/float

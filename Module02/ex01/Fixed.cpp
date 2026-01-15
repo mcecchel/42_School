@@ -6,7 +6,7 @@
 /*   By: mcecchel <mcecchel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 12:36:39 by mcecchel          #+#    #+#             */
-/*   Updated: 2026/01/15 13:04:49 by mcecchel         ###   ########.fr       */
+/*   Updated: 2026/01/15 16:22:41 by mcecchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,5 +59,5 @@ void	Fixed::setRawBits(int const raw) {
 // Overload operator<<
 std::ostream& operator<<(std::ostream& os, const Fixed& fixed) {
 	os << fixed.toFloat();
-	return os;
+	return (os);
 }
