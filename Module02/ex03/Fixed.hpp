@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcecchel <mcecchel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/15 15:04:57 by mcecchel          #+#    #+#             */
-/*   Updated: 2026/01/18 17:09:57 by mcecchel         ###   ########.fr       */
+/*   Created: 2026/01/18 15:24:55 by mcecchel          #+#    #+#             */
+/*   Updated: 2026/01/18 15:31:32 by mcecchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ private:
 public:
 	Fixed();
 	Fixed(const Fixed& copy);
-	Fixed& operator=(const Fixed& copy);
+	Fixed& operator=(const Fixed& copy);// Ritorna reference per permettere il concatenamento delle assegnazioni
 	~Fixed();
 
 	Fixed(const int value);
@@ -61,7 +61,6 @@ public:
 	static	Fixed& max(Fixed& a, Fixed& b);
 	static	const Fixed& max(const Fixed& a, const Fixed& b);
 };
-// Overload operator<<, permette operazione std::cout << fixed
 std::ostream& operator<<(std::ostream& os, const Fixed& fixed);
 
 #endif

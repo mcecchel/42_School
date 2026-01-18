@@ -6,7 +6,7 @@
 /*   By: mcecchel <mcecchel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 12:26:55 by mcecchel          #+#    #+#             */
-/*   Updated: 2026/01/15 15:32:32 by mcecchel         ###   ########.fr       */
+/*   Updated: 2026/01/18 17:09:44 by mcecchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ private:
 public:
 	Fixed();
 	Fixed(const Fixed& copy);
+	// Ritorna reference per permettere il concatenamento delle assegnazioni
 	Fixed& operator=(const Fixed& copy);
 	~Fixed();
 

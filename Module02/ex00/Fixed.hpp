@@ -6,7 +6,7 @@
 /*   By: mcecchel <mcecchel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 13:43:04 by mcecchel          #+#    #+#             */
-/*   Updated: 2026/01/15 15:33:48 by mcecchel         ###   ########.fr       */
+/*   Updated: 2026/01/18 17:07:15 by mcecchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,10 @@ private:
 	static const int	_fractionalBits = 8;// Num di bit frazionari
 public:
 	Fixed();
-	Fixed(const Fixed& copy);// Copy constructor
-	Fixed& operator=(const Fixed& copy);// Copy assignment operator, ritorna reference per permettere il concatenamento delle assegnazioni
+	// Copy constructor
+	Fixed(const Fixed& copy);
+	// Copy assignment operator, ritorna reference per permettere il concatenamento delle assegnazioni
+	Fixed& operator=(const Fixed& copy);
 	~Fixed();
 
 	int		getRawBits(void) const;
