@@ -6,7 +6,7 @@
 /*   By: mcecchel <mcecchel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 14:03:30 by mcecchel          #+#    #+#             */
-/*   Updated: 2026/02/02 16:58:22 by mcecchel         ###   ########.fr       */
+/*   Updated: 2026/02/02 17:05:51 by mcecchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,15 +88,12 @@ void ClapTrap::beRepaired(unsigned int amount) {
 std::string ClapTrap::getName() const {
 	return (_name);
 }
-
 unsigned int ClapTrap::getHitPoints() const {
 	return (_hitPoints);
 }
-
 unsigned int ClapTrap::getEnergyPoints() const {
 	return (_energyPoints);
 }
-
 unsigned int ClapTrap::getAttackDamage() const {
 	return (_attackDamage);
 }

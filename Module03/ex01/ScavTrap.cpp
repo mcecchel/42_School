@@ -6,7 +6,7 @@
 /*   By: mcecchel <mcecchel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/30 19:37:25 by mcecchel          #+#    #+#             */
-/*   Updated: 2026/02/02 16:58:22 by mcecchel         ###   ########.fr       */
+/*   Updated: 2026/02/02 17:01:58 by mcecchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void	ScavTrap::attack(const std::string& target) {
 	}
 	// Attacco valido quindi perde 1 energia
 	_energyPoints--;
-	std::cout << "ScavTrap " << _name << " attacks " << target << "in a different way, causing "
+	std::cout << "ScavTrap " << _name << " attacks " << target << " in a different way, causing "
 		<< _attackDamage << " points of damage!" << std::endl;
 }
 // Metodo speciale

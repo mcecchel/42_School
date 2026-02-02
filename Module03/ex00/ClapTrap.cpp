@@ -6,7 +6,7 @@
 /*   By: mcecchel <mcecchel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 14:03:30 by mcecchel          #+#    #+#             */
-/*   Updated: 2026/01/29 17:29:12 by mcecchel         ###   ########.fr       */
+/*   Updated: 2026/02/02 17:05:41 by mcecchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void	ClapTrap::attack(const std::string& target) {
 	}
 	// Controlla se e' vivo
 	if (_hitPoints == 0) {
-		std::cout << "ClapTrap " << _name << " is dead and cannot attack, ripj" << std::endl;
+		std::cout << "ClapTrap " << _name << " is dead and cannot attack (ripj)" << std::endl;
 		return ;
 	}
 	// Attacco valido quindi perde 1 energia
@@ -76,7 +76,7 @@ void ClapTrap::beRepaired(unsigned int amount) {
 	}
 	if (_hitPoints == 0)// Se e' morto non può
 	{
-		std::cout << "ClapTrap " << _name << " is dead and cannot repair" << std::endl;
+		std::cout << "ClapTrap " << _name << " is dead and cannot repair (ripj)" << std::endl;
 		return ;
 	}
 	// Rigenerazione valida
@@ -88,15 +88,12 @@ void ClapTrap::beRepaired(unsigned int amount) {
 std::string ClapTrap::getName() const {
 	return (_name);
 }
-
 unsigned int ClapTrap::getHitPoints() const {
 	return (_hitPoints);
 }
-
 unsigned int ClapTrap::getEnergyPoints() const {
 	return (_energyPoints);
 }
-
 unsigned int ClapTrap::getAttackDamage() const {
 	return (_attackDamage);
 }

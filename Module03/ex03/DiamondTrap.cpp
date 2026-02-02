@@ -6,7 +6,7 @@
 /*   By: mcecchel <mcecchel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/02 14:01:54 by mcecchel          #+#    #+#             */
-/*   Updated: 2026/02/02 14:08:59 by mcecchel         ###   ########.fr       */
+/*   Updated: 2026/02/02 17:07:39 by mcecchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,6 @@ DiamondTrap& DiamondTrap::operator=(const DiamondTrap& copy) {
 DiamondTrap::~DiamondTrap() {
 	std::cout << "DiamondTrap " << this->_name << " destructor called" << std::endl;
 }
-
 void DiamondTrap::whoAmI() {
 	std::cout << "I am DiamondTrap " << this->_name << " and my ClapTrap name is " << ClapTrap::_name << std::endl;
 }
