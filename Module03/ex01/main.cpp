@@ -6,7 +6,7 @@
 /*   By: mcecchel <mcecchel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/30 19:36:51 by mcecchel          #+#    #+#             */
-/*   Updated: 2026/02/02 17:00:35 by mcecchel         ###   ########.fr       */
+/*   Updated: 2026/02/04 12:02:48 by mcecchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int main()
 {
 	std::cout << "[ TEST 1: Construction Chain ]" << std::endl;
-	ScavTrap scav1("ST-01");
+	ScavTrap scav1("ST-01[scav1]");
 	std::cout << "\nStats: HP=" << scav1.getHitPoints() 
 			  << " Energy=" << scav1.getEnergyPoints() 
 			  << " Damage=" << scav1.getAttackDamage() << std::endl;
@@ -40,8 +40,8 @@ int main()
 	std::cout << std::endl;
 	
 	std::cout << "[ TEST 5: Multiple ScavTraps ]" << std::endl;
-	ScavTrap scav2("ST-02");
-	ScavTrap scav3("ST-03");
+	ScavTrap scav2("ST-02[scav2]");
+	ScavTrap scav3("ST-03[scav3]");
 	scav2.attack("Target");
 	scav3.guardGate();
 	std::cout << std::endl;
@@ -52,7 +52,7 @@ int main()
 	std::cout << std::endl;
 	
 	std::cout << "[ TEST 7: Comparison with ClapTrap ]" << std::endl;
-	ClapTrap clap("CT-01");
+	ClapTrap clap("CT-01[clap]");
 	std::cout << "ClapTrap stats: HP=" << clap.getHitPoints() 
 			  << " Energy=" << clap.getEnergyPoints() 
 			  << " Damage=" << clap.getAttackDamage() << std::endl;
@@ -64,6 +64,12 @@ int main()
 	std::cout << "ScavTrap attack:" << std::endl;
 	scav1.attack("Target");
 	std::cout << std::endl;
+
 	std::cout << "[ Destruction Chain ]" << std::endl;
+	std::cout << "NOTE: Two 'ST-01' appear because scav4 is a copy of scav1" << std::endl;
+	std::cout << "  - copy constructor copies '_name' too" << std::endl;
+	std::cout << "NOTE: For each ScavTrap, you'll see TWO destructors:" << std::endl;
+	std::cout << "  - 1) ScavTrap destructor (derived class)" << std::endl;
+	std::cout << "  - 2) ClapTrap destructor (base class) - automatic\n" << std::endl;
 	return (0);
 }

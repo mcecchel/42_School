@@ -6,7 +6,7 @@
 /*   By: mcecchel <mcecchel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 14:03:20 by mcecchel          #+#    #+#             */
-/*   Updated: 2026/02/02 15:32:06 by mcecchel         ###   ########.fr       */
+/*   Updated: 2026/02/04 11:53:05 by mcecchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,5 +72,9 @@ int main()
 	std::cout << "After assignment - CT-06 HP: " << clap6.getHitPoints() << std::endl;
 	
 	std::cout << "\n[ Destruction Chain ]" << std::endl;
+	std::cout << "NOTE: All three will show 'CT-04' in destructors because:" << std::endl;
+	std::cout << "  - clap4 was created with name \"CT-04\"" << std::endl;
+	std::cout << "  - clap5 is a copy of clap4 (copy constructor copies '_name' too)" << std::endl;
+	std::cout << "  - clap6 was assigned from clap4 (assignment operator copies '_name')" << std::endl;
 	return (0);
 }

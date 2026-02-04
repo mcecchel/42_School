@@ -6,7 +6,7 @@
 /*   By: mcecchel <mcecchel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/02 13:14:55 by mcecchel          #+#    #+#             */
-/*   Updated: 2026/02/02 13:34:55 by mcecchel         ###   ########.fr       */
+/*   Updated: 2026/02/04 12:04:53 by mcecchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int main()
 {
 	std::cout << "[ TEST 1: Construction Chain ]" << std::endl;
-	FragTrap frag1("FT-01");
+	FragTrap frag1("FT-01[frag1]");
 	std::cout << "\nFragTrap stats: HP=" << frag1.getHitPoints() 
 			  << " Energy=" << frag1.getEnergyPoints() 
 			  << " Damage=" << frag1.getAttackDamage() << std::endl;
@@ -40,9 +40,9 @@ int main()
 	std::cout << std::endl;
 	
 	std::cout << "[ TEST 5: All Three Together ]" << std::endl;
-	ClapTrap clap("CT-01");
-	ScavTrap scav("ST-01");
-	FragTrap frag2("FT-02");
+	ClapTrap clap("CT-01[clap]");
+	ScavTrap scav("ST-01[scav]");
+	FragTrap frag2("FT-02[frag2]");
 	std::cout << "\n--- Stats Comparison ---" << std::endl;
 	std::cout << "ClapTrap: HP=" << clap.getHitPoints() 
 			  << " Energy=" << clap.getEnergyPoints() 
@@ -69,7 +69,7 @@ int main()
 	std::cout << std::endl;
 	
 	std::cout << "[ TEST 7: Energy Depletion ]" << std::endl;
-	FragTrap frag4("FT-04");
+	FragTrap frag4("FT-04[frag4]");
 	std::cout << "Starting energy: " << frag4.getEnergyPoints() << std::endl;
 	// Consuma energia
 	for (int i = 0; i < 50; i++) {
@@ -87,8 +87,10 @@ int main()
 	std::cout << std::endl;
 	
 	std::cout << "[ Destruction Chain ]" << std::endl;
-	// NB: frag3 è una copia di frag1 quindi:
-		// Entrambi hanno _name = "FT-01"
-		// Vengono distrutti in momenti diversi ma i messaggi sono identici (stesso nome)
+	std::cout << "NOTE: Two 'FT-01[frag1]' appear because frag3 is a copy of frag1" << std::endl;
+	std::cout << "  - copy constructor copies '_name' too" << std::endl;
+	std::cout << "NOTE: For each derived class, you'll see TWO destructors:" << std::endl;
+	std::cout << "  - 1) Derived class destructor (FragTrap/ScavTrap)" << std::endl;
+	std::cout << "  - 2) Base class destructor (ClapTrap) - automatic\n" << std::endl;
 	return (0);
 }
