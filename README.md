@@ -47,4 +47,4 @@ Stay tuned for updates and final results!
 ## 🧑‍💻 About Me
 
 I'm a passionate learner at **42 School**, diving deep into system programming, algorithms, and more.  
-Check out my [GitHub profile](https://github.com/mcecchel) for other projects and contributions!
+Check out my [LinkedIn profile](https://www.linkedin.com/in/marianna-cecchelli-49634823b/) to get in touch.
