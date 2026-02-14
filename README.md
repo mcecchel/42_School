@@ -20,8 +20,8 @@ This `main` branch is reserved for general updates and communication.
 | 💻 Minishell     | ✅ Done | `101/100` | [View branch](https://github.com/mcecchel/minishell) |
 | 🏛 Philosophers  | ✅ Done | `100/100` | [View branch](https://github.com/mcecchel/Philosophers) |
 | 🌐 NetPractice   | ✅ Done | `100/100` | [View branch](https://github.com/mcecchel/42_CommonCore/tree/NetPractice) |
+| 🎮 Cub3d         | ✅ Done | `125/100` |[View branch](https://github.com/mcecchel/42_CommonCore/tree/cub3d/cub3d) |
 | CPP Modules      | 🔄 In progress |             | [View branch](https://github.com/mcecchel/42_CommonCore/tree/CPP_Modules) |
-| 🎮 Cub3d         | 🔄 In progress |             |[View branch](https://github.com/terzogode/cub3D) |
 
 ---
 
@@ -30,11 +30,6 @@ This `main` branch is reserved for general updates and communication.
 ### CPP Module04
 I'm currently working on the `cpp modules` — a series of progressive exercises designed to introduce the fundamentals of modern C++ programming within the 42 curriculum.  
 Each module focuses on a specific concept such as object-oriented design, memory management, inheritance, polymorphism, exceptions, and templates, all aimed at building clean, robust, and maintainable code.
-
-### 🎮 cub3D
-cub3D is a core graphics project of the 42 Common Core curriculum.
-The goal is to build a simple 3D engine in C using raycasting techniques.
-The project places strong emphasis on parsing and validation of the .cub configuration file, map correctness, strict error handling, and memory safety (no leaks, no invalid access), following the coding standards and constraints imposed by 42.
 
 More updates coming soon as I progress through the modules.
 Stay tuned for updates and final results!
