@@ -6,7 +6,7 @@
 /*   By: mcecchel <mcecchel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/09 17:12:10 by mcecchel          #+#    #+#             */
-/*   Updated: 2026/02/09 17:50:09 by mcecchel         ###   ########.fr       */
+/*   Updated: 2026/02/10 16:14:39 by mcecchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@ Brain::Brain() {
 }
 Brain::Brain(const Brain& copy) {
 	std::cout << "Brain copy constructor called" << std::endl;
-	*this = copy;
+	for (int i = 0; i < 100; i++) {
+		this->ideas[i] = copy.ideas[i];
+	}
 }
 // Deep Copy dell'Array
 Brain& Brain::operator=(const Brain& copy) {
