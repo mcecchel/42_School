@@ -1,33 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcecchel <mcecchel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/09 17:22:38 by mcecchel          #+#    #+#             */
-/*   Updated: 2026/02/27 14:24:48 by mcecchel         ###   ########.fr       */
+/*   Created: 2026/02/05 17:04:30 by mcecchel          #+#    #+#             */
+/*   Updated: 2026/02/05 17:07:47 by mcecchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-#define DOG_HPP
+#ifndef WRONGANIMAL_HPP
+#define WRONGANIMAL_HPP
 
-#include "Animal.hpp"
-#include "Brain.hpp"
+#include <iostream>
+#include <string>
 
-class Dog : public Animal {
-private:
-	Brain* _brain;// ptr a Brain (allocato dinamicamente)
+class WrongAnimal {
+protected:
+	std::string type;
 public:
-	Dog();
-	Dog(const Dog& copy);
-	Dog& operator=(const Dog& copy);
-	~Dog();
+	// Orthodox Canonical Form
+	WrongAnimal();
+	WrongAnimal (const WrongAnimal& copy);
+	WrongAnimal& operator= (const WrongAnimal& copy);
+	~WrongAnimal();
 
-	// Metodi
-	void	makeSound() const;
-	Brain*	getBrain() const;
+	void		makeSound() const;
+	std::string	getType() const;
+	// nb: no virtual qui
 };
 
 #endif

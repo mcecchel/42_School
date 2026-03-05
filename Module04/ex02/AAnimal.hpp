@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   AAnimal.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcecchel <mcecchel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/09 17:22:38 by mcecchel          #+#    #+#             */
-/*   Updated: 2026/02/27 14:24:48 by mcecchel         ###   ########.fr       */
+/*   Created: 2026/02/05 16:26:42 by mcecchel          #+#    #+#             */
+/*   Updated: 2026/02/27 15:12:12 by mcecchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-#define DOG_HPP
+#ifndef AANIMAL_HPP
+#define AANIMAL_HPP
 
-#include "Animal.hpp"
-#include "Brain.hpp"
+#include <iostream>
+#include <string>
 
-class Dog : public Animal {
-private:
-	Brain* _brain;// ptr a Brain (allocato dinamicamente)
+class AAnimal {
+protected:
+	std::string type;
 public:
-	Dog();
-	Dog(const Dog& copy);
-	Dog& operator=(const Dog& copy);
-	~Dog();
+	// Orthodox Canonical Form
+	AAnimal();
+	AAnimal (const AAnimal& copy);
+	AAnimal& operator= (const AAnimal& copy);
+	virtual ~AAnimal();
 
-	// Metodi
-	void	makeSound() const;
-	Brain*	getBrain() const;
+	// Virtual function per polimorfismo
+	virtual void	makeSound() const = 0; // Pure virtual function
+	// Getter
+	std::string		getType() const;
 };
 
 #endif

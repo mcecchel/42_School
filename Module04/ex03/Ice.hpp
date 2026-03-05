@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Ice.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcecchel <mcecchel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/09 17:22:38 by mcecchel          #+#    #+#             */
-/*   Updated: 2026/02/27 14:24:48 by mcecchel         ###   ########.fr       */
+/*   Created: 2026/02/27 16:00:00 by mcecchel          #+#    #+#             */
+/*   Updated: 2026/02/27 16:04:46 by mcecchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-#define DOG_HPP
+#ifndef ICE_HPP
+#define ICE_HPP
 
-#include "Animal.hpp"
-#include "Brain.hpp"
+#include "AMateria.hpp"
 
-class Dog : public Animal {
-private:
-	Brain* _brain;// ptr a Brain (allocato dinamicamente)
+// Materia concreta di tipo "ice"
+
+class Ice : public AMateria {
 public:
-	Dog();
-	Dog(const Dog& copy);
-	Dog& operator=(const Dog& copy);
-	~Dog();
+	Ice();
+	Ice(const Ice& copy);
+	Ice& operator=(const Ice& copy);
+	~Ice();
 
-	// Metodi
-	void	makeSound() const;
-	Brain*	getBrain() const;
+	// Crea una copia di se stesso sull'heap
+	AMateria* clone() const;
+	// Override di use() per sparare un dardo di ghiaccio al target
+	void use(ICharacter& target);
 };
 
 #endif

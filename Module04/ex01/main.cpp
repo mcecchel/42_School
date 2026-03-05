@@ -6,15 +6,11 @@
 /*   By: mcecchel <mcecchel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/09 17:56:16 by mcecchel          #+#    #+#             */
-/*   Updated: 2026/02/10 16:17:15 by mcecchel         ###   ########.fr       */
+/*   Updated: 2026/02/27 14:32:37 by mcecchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Brain.hpp"
-#include "Animal.hpp"
-#include "Dog.hpp"
-#include "Cat.hpp"
-
 #include "Animal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
@@ -65,10 +61,10 @@ int main()
 	std::cout << "Original Brain address: " << original->getBrain() << std::endl;
 	std::cout << "Copy Brain address:     " << copy->getBrain() << std::endl;
 	if (original->getBrain() != copy->getBrain()) {
-		std::cout << "✓ Deep copy successful! Different Brain objects." << std::endl;
+		std::cout << "✓ Deep copy successful! Different Brain objects" << std::endl;
 	}
 	else {
-		std::cout << "✗ Shallow copy! Same Brain object!" << std::endl;
+		std::cout << "✗ Shallow copy :( Same Brain object" << std::endl;
 	}
 	std::cout << "\n--- Checking ideas copied correctly ---" << std::endl;
 	std::cout << "Original idea 0: " << original->getBrain()->getIdea(0) << std::endl;
@@ -78,10 +74,10 @@ int main()
 	std::cout << "Original idea 0: " << original->getBrain()->getIdea(0) << std::endl;
 	std::cout << "Copy idea 0:     " << copy->getBrain()->getIdea(0) << std::endl;
 	if (original->getBrain()->getIdea(0) != copy->getBrain()->getIdea(0)) {
-		std::cout << "✓ Ideas are independent! True deep copy." << std::endl;
+		std::cout << "✓ Ideas are independent! True deep copy" << std::endl;
 	}
 	else {
-		std::cout << "✗ Ideas are shared! Shallow copy!" << std::endl;
+		std::cout << "✗ Ideas are shared = Shallow copy" << std::endl;
 	}
 	std::cout << "\n--- Deleting dogs ---" << std::endl;
 	delete original;
@@ -99,10 +95,10 @@ int main()
 	std::cout << "Cat1 Brain address: " << cat1.getBrain() << std::endl;
 	std::cout << "Cat2 Brain address: " << cat2.getBrain() << std::endl;
 	if (cat1.getBrain() != cat2.getBrain()) {
-		std::cout << "✓ Deep copy! Different Brain objects." << std::endl;
+		std::cout << "✓ Deep copy = Different Brain objects" << std::endl;
 	}
 	else {
-		std::cout << "✗ Shallow copy! Same Brain!" << std::endl;
+		std::cout << "✗ Shallow copy :( Same Brain" << std::endl;
 	}
 	std::cout << "\n--- Modifying cat2 ---" << std::endl;
 	cat2.getBrain()->setIdea(0, "I hate dogs");

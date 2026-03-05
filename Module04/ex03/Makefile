@@ -1,14 +1,13 @@
-NAME = animal
+NAME = materia
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC =	Animal.cpp \
-		Brain.cpp \
-		Cat.cpp \
-		Dog.cpp \
-		main.cpp \
-		WrongAnimal.cpp \
-		WrongCat.cpp
+SRC =	AMateria.cpp \
+		Ice.cpp \
+		Cure.cpp \
+		Character.cpp \
+		MateriaSource.cpp \
+		main.cpp
 
 all: $(NAME)
 

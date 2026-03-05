@@ -2,7 +2,7 @@ NAME = animal
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC =	Animal.cpp \
+SRC =	AAnimal.cpp \
 		Brain.cpp \
 		Cat.cpp \
 		Dog.cpp \

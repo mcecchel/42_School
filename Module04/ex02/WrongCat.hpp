@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcecchel <mcecchel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/09 17:22:38 by mcecchel          #+#    #+#             */
-/*   Updated: 2026/02/27 14:24:48 by mcecchel         ###   ########.fr       */
+/*   Created: 2026/02/05 16:46:16 by mcecchel          #+#    #+#             */
+/*   Updated: 2026/02/09 14:53:08 by mcecchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-#define DOG_HPP
+#ifndef WRONGCAT_HPP
+#define WRONGCAT_HPP
 
-#include "Animal.hpp"
-#include "Brain.hpp"
+#include "WrongAnimal.hpp"
 
-class Dog : public Animal {
-private:
-	Brain* _brain;// ptr a Brain (allocato dinamicamente)
+class WrongCat : public WrongAnimal {
 public:
-	Dog();
-	Dog(const Dog& copy);
-	Dog& operator=(const Dog& copy);
-	~Dog();
+	// Orthodox Canonical Form
+	WrongCat();
+	WrongCat(const WrongCat& copy);
+	WrongCat& operator=(const WrongCat& copy);
+	~WrongCat();
 
-	// Metodi
 	void	makeSound() const;
-	Brain*	getBrain() const;
+	// nb: non virtual perche' base non e' virtual
 };
 
 #endif
