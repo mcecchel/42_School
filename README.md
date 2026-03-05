@@ -27,7 +27,7 @@ This `main` branch is reserved for general updates and communication.
 
 ## 🛠️ Currently Working On
 
-### CPP Module04
+### CPP Module05
 I'm currently working on the `cpp modules` — a series of progressive exercises designed to introduce the fundamentals of modern C++ programming within the 42 curriculum.  
 Each module focuses on a specific concept such as object-oriented design, memory management, inheritance, polymorphism, exceptions, and templates, all aimed at building clean, robust, and maintainable code.
 
