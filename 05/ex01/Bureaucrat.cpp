@@ -6,7 +6,7 @@
 /*   By: mcecchel <mcecchel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/05 14:50:59 by mcecchel          #+#    #+#             */
-/*   Updated: 2026/03/05 17:54:25 by mcecchel         ###   ########.fr       */
+/*   Updated: 2026/03/06 18:10:36 by mcecchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ Bureaucrat& Bureaucrat::operator=(const Bureaucrat& copy) {
 	return (*this);
 }
 Bureaucrat::~Bureaucrat() {
-	std::cout << "Bureaucrat [" << _name << "] destructor called" << std::endl;
+	std::cout << "Bureaucrat '" << _name << "' destructor called" << std::endl;
 }
 
 std::string	const & Bureaucrat::getName() const {

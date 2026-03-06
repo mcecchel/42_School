@@ -6,11 +6,12 @@
 /*   By: mcecchel <mcecchel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/05 14:50:59 by mcecchel          #+#    #+#             */
-/*   Updated: 2026/03/06 18:10:54 by mcecchel         ###   ########.fr       */
+/*   Updated: 2026/03/06 18:10:01 by mcecchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "AForm.hpp"// incluso per rompere dipendenza circolare
 
 // Costruttore: inizializza burocrate con nome e grado (1-150)
 Bureaucrat::Bureaucrat(std::string const & name, int grade) : _name(name), _grade(grade) {
@@ -63,4 +64,26 @@ const char* Bureaucrat::GradeTooLowException::what() const throw()
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& b) {
 	os << b.getName() << ", bureaucrat grade " << b.getGrade();
 	return (os);
+}
+// Burocrate prova a firmare un modulo
+void Bureaucrat::signForm(AForm& form)
+{
+	try {
+		form.beSigned(*this);
+		std::cout << _name << " signed " << form.getName() << std::endl;
+	}
+	catch (std::exception& e) {
+		std::cout << _name << " couldn't sign " << form.getName()
+				  << " because " << e.what() << std::endl;
+	}
+}
+// Nuovo metodo: 
+void Bureaucrat::executeForm(AForm const & form) const {
+	try {
+		form.execute(*this);
+		std::cout << _name << " executed " << form.getName() << std::endl;
+	}
+	catch (std::exception& e) {
+		std::cout << _name << " couldn't execute " << form.getName() << " because " << e.what() << std::endl;
+	}
 }
