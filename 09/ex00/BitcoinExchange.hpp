@@ -6,7 +6,7 @@
 /*   By: mcecchel <mcecchel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/03 19:16:37 by mcecchel          #+#    #+#             */
-/*   Updated: 2026/04/03 19:46:24 by mcecchel         ###   ########.fr       */
+/*   Updated: 2026/04/08 16:12:54 by mcecchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 
 class BitcoinExchange {
 private:
-	std::map<std::string, float> database;
+	std::map<std::string, float> _db;
 
 	bool	isValidDate(const std::string& date) const;
 	bool	isValidValue(const std::string& strVal, float& output) const;
@@ -35,7 +35,7 @@ public:
 	~BitcoinExchange();
 
 	void	loadDatabase(const std::string& csvFile);
-	void	processInputFile(const std::string& inputFile);
+	void	processInput(const std::string& inputFile) const;
 };
 
 #endif
