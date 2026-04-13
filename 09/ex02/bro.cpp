@@ -6,15 +6,14 @@
 /*   By: mcecchel <mcecchel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/09 15:52:13 by mcecchel          #+#    #+#             */
-/*   Updated: 2026/04/13 17:19:25 by mcecchel         ###   ########.fr       */
+/*   Updated: 2026/04/13 17:03:38 by mcecchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PmergeMe.hpp"
 
 PmergeMe::PmergeMe() {}
-PmergeMe::PmergeMe(const PmergeMe& copy)
-	: _vector(copy._vector), _deque(copy._deque) {}
+PmergeMe::PmergeMe(const PmergeMe& copy) : _vector(copy._vector), _deque(copy._deque) {}
 PmergeMe& PmergeMe::operator=(const PmergeMe& copy) {
 	if (this != &copy)
 	{
@@ -25,42 +24,48 @@ PmergeMe& PmergeMe::operator=(const PmergeMe& copy) {
 }
 PmergeMe::~PmergeMe() {}
 
-// Parse degli argomenti da argv
-void PmergeMe::parseInput(int ac, char* av[])
+void	PmergeMe::parseInput(int ac, char **av)
 {
-	for (int i = 1; i < ac; i++)
+	int	i = 1;
+	while (i < ac)
 	{
 		std::istringstream iss(av[i]);
-		int n;
-		iss >> n;
-		if (iss.fail() || !iss.eof())
-			throw std::runtime_error("Error");
-		if (n <= 0)
-			throw std::runtime_error("Error");
-		_vector.push_back(n);
-		_deque.push_back(n);
+		int	nbr;
+		if (!(iss >> nbr))
+			throw std::invalid_argument("Error: Invalid input. Non-integer value found.");
+		if (nbr <= 0)
+			throw std::invalid_argument("Error: Invalid input. Only positive integers are allowed.");
+		_vector.push_back(nbr);
+		_deque.push_back(nbr);
+		i++;
 	}
 }
 
 // Costruisce la sequenza di Jacobsthal fino a n elementi
 std::vector<std::size_t> PmergeMe::createJacobsthal(size_t n) const
 {
-	std::vector<std::size_t> jac;
-	jac.push_back(0);
-	jac.push_back(1);
-	while (jac.back() < n)
-		jac.push_back(jac[jac.size()-1] + 2 * jac[jac.size()-2]);
-	return (jac);
+	std::vector<std::size_t> jSequence;
+	jSequence.push_back(0);// J(0)
+	jSequence.push_back(1);// J(1)
+	for (size_t i = 2; jSequence.size() < n; ++i)
+	{
+		std::size_t next = jSequence[i - 1] + 2 * jSequence[i - 2];
+		jSequence.push_back(next);
+	}
+	return (jSequence);
 }
 
+// ===============================================================
 // FORD-JOHNSON per std::vector
-void PmergeMe::insertPendVector(std::vector<int>& main, const std::vector<int>& pend,
+// ===============================================================
+void PmergeMe::insertPendVector(std::vector<int>& main,
+								 const std::vector<int>& pend,
 								 const std::vector<std::size_t>& jac)
 {
 	std::size_t n = pend.size();
 	std::vector<bool> inserted(n, false);
 
-	// Scorriamo i gruppi di Jacobsthal in ordine
+	// Scorriamo i gruppi di Jacobsthal in o0rdine
 	for (std::size_t ji = 2; ji < jac.size(); ji++)
 	{
 		// Inseriamo da jac[ji]-1 fino a jac[ji-1] (incluso) in ordine decrescente
@@ -118,10 +123,16 @@ void PmergeMe::fjVector(std::vector<int>& v)
 
 	// 1. Pairing: separa vincitori e perdenti
 	bool hasOdd = (n % 2 != 0);
-	int oddEl = hasOdd ? v.back() : 0;
+	std::size_t pairLimit = n;
+	int oddEl = 0;
+	if (hasOdd)
+	{
+		pairLimit = n - 1;
+		oddEl = v.back();
+	}
 
 	std::vector<int> winners, losers;
-	for (std::size_t i = 0; i + 1 < (hasOdd ? n - 1 : n); i += 2)
+	for (std::size_t i = 0; i + 1 < pairLimit; i += 2)
 	{
 		if (v[i] > v[i + 1])
 		{
@@ -160,7 +171,9 @@ void PmergeMe::fjVector(std::vector<int>& v)
 	v = main_chain;
 }
 
+// ===============================================================
 // FORD-JOHNSON per std::deque
+// ===============================================================
 void PmergeMe::insertPendDeque(std::deque<int>& main,
 								const std::deque<int>& pend,
 								const std::vector<std::size_t>& jac)
@@ -209,10 +222,16 @@ void PmergeMe::fjDeque(std::deque<int>& d)
 	}
 
 	bool hasOdd = (n % 2 != 0);
-	int oddEl = hasOdd ? d.back() : 0;
+	std::size_t pairLimit = n;
+	int oddEl = 0;
+	if (hasOdd)
+	{
+		pairLimit = n - 1;
+		oddEl = d.back();
+	}
 
 	std::deque<int> winners, losers;
-	for (std::size_t i = 0; i + 1 < (hasOdd ? n - 1 : n); i += 2)
+	for (std::size_t i = 0; i + 1 < pairLimit; i += 2)
 	{
 		if (d[i] > d[i + 1])
 		{
@@ -247,7 +266,9 @@ void PmergeMe::fjDeque(std::deque<int>& d)
 	d = main_chain;
 }
 
+// -------------------------------------------------------
 // Funzione principale: esegue entrambi, misura il tempo
+// -------------------------------------------------------
 void PmergeMe::sort()
 {
 	// Stampa sequenza non ordinata
