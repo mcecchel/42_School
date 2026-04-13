@@ -6,7 +6,7 @@
 /*   By: mcecchel <mcecchel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/03 19:16:56 by mcecchel          #+#    #+#             */
-/*   Updated: 2026/04/08 17:12:31 by mcecchel         ###   ########.fr       */
+/*   Updated: 2026/04/09 14:30:00 by mcecchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -186,7 +186,7 @@ void BitcoinExchange::processInput(const std::string& inputFile) const
 			std::cout << "Error: too large a number." << std::endl;
 			continue;
 		}
-		// Calcolo e stampa il valore in Bitcoin
+		// Calcolo e stampo il valore in Bitcoin
 		try
 		{
 			float rate   = getRate(date);
