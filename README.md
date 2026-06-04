@@ -20,18 +20,20 @@ This `main` branch is reserved for general updates and communication.
 | 💻 Minishell     | ✅ Done | `101/100` | [View branch](https://github.com/mcecchel/minishell) |
 | 🏛 Philosophers  | ✅ Done | `100/100` | [View branch](https://github.com/mcecchel/Philosophers) |
 | 🌐 NetPractice   | ✅ Done | `100/100` | [View branch](https://github.com/mcecchel/42_CommonCore/tree/NetPractice) |
-| 🎮 Cub3d         | ✅ Done | `125/100` |[View branch](https://github.com/mcecchel/42_CommonCore/tree/cub3d/cub3d) |
-| CPP Modules      | 🔄 In progress |             | [View branch](https://github.com/mcecchel/42_CommonCore/tree/CPP_Modules) |
+| 🎮 Cub3d         | ✅ Done | `125/100` | [View branch](https://github.com/mcecchel/42_CommonCore/tree/cub3d/cub3d) |
+| ⚙️ CPP Modules | ✅ Done | `All passed` | [View branch](https://github.com/mcecchel/42_CommonCore/tree/CPP_Modules) |
+| 🌀 Inception     | 🔄 In progress | — | [View branch](https://github.com/mcecchel/42_CommonCore/tree/inception) |
 
 ---
 
 ## 🛠️ Currently Working On
 
-### CPP Module09 (last module)
-I'm currently working on the `cpp modules` — a series of progressive exercises designed to introduce the fundamentals of modern C++ programming within the 42 curriculum.  
-Each module focuses on a specific concept such as object-oriented design, memory management, inheritance, polymorphism, exceptions, and templates, all aimed at building clean, robust, and maintainable code.
+### Inception
 
-More updates coming soon as I progress through the modules.
+I'm currently working on `Inception` — a system administration project focused on Docker and containerization within the 42 curriculum.  
+The goal is to set up a complete multi-service infrastructure using **Docker Compose**, where each service runs in its own container built from scratch: NGINX with TLS, WordPress + php-fpm, and MariaDB — all deployed inside a virtual machine.
+
+More updates coming soon as I progress through the project.  
 Stay tuned for updates and final results!
 
 ---
